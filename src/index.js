@@ -1,3 +1,4 @@
+require("dotenv").config();
 require("./config/db");
 
 const express = require("express");
@@ -35,7 +36,7 @@ app.use((error, req, res, next) => {
   res.status(500).json({ data: "Internal Server Error" });
 });
 
-const PORT = 4001;
+const PORT = Number(process.env.PORT);
 app.listen(PORT, () => {
   console.log(
     `La aplicación está corriendo en: http://localhost:${PORT}/api/kittens`
