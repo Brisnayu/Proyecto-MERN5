@@ -1,4 +1,4 @@
-const Kitten = require("../models/kittens");
+const Kitten = require("../models/kitten");
 
 const getAllKittenFromDB = async (filter) => {
   const filterOptions = {
